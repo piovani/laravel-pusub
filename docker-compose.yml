@@ -1,0 +1,24 @@
+version: '3.3'
+
+networks:
+  laravel-pubsub-network:
+    external: true
+
+services:
+  laravel:
+    image: ambientum/php:8.0-nginx
+    volumes:
+      - .:/var/www/app
+    environment:
+      - PUBSUB_EMULATOR_HOST=${PUBSUB_HOST}
+      - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_CREDENTIALS_PATH}
+    ports:
+      - "8000:8080"
+    networks:
+      - laravel-pubsub-network
+  pubsub:
+    build: ./docker/pubsub
+    ports:
+      - 8086:8085
+    networks:
+      - laravel-pubsub-network
