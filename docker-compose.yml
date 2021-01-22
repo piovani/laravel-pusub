@@ -16,9 +16,11 @@ services:
       - "8000:8080"
     networks:
       - laravel-pubsub-network
+    depends_on:
+      - pubsub
   pubsub:
     build: ./docker/pubsub
     ports:
-      - 8085:8085
+      - "8085:8085"
     networks:
       - laravel-pubsub-network
