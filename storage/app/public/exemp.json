@@ -1,0 +1,32 @@
+{
+    "ticket": "1165a80d1aa85402d06867e219c96f1f",
+    "status": "distanceMatrix",
+    "matrix": {
+        "defaultDistance": 1000,
+        "maxDistance": 0,
+        "orders": [
+            {
+                "id": 1647484,
+                "latitude": -23.6351,
+                "longitude": -46.791539
+            },
+            {
+                "id": 1647485,
+                "latitude": -23.70523,
+                "longitude": -46.518611
+            }
+        ]
+    },
+    "cluster": {
+        "quantityScenarios": 1,
+        "quantityClusters": 1,
+        "intervalQuantity": 1,
+        "generate": true
+    },
+    "response": {
+        "preferenceDataType": "csv",
+        "dataType": "",
+        "filePath": "",
+        "data": []
+    }
+}
